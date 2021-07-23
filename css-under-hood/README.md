@@ -13,3 +13,6 @@ Probably I will talk about some of this themes:
 * [Устройство современного веб-браузера Chrome (часть 4/4)](https://habr.com/ru/post/529258/)
 * [JavaScript: The Advanced Concepts (2021)](https://www.udemy.com/course/advanced-javascript-concepts/)
 * [Андрей Мелихов - V8 под капотом](https://www.youtube.com/watch?v=SNs61SwZbTI&t)
+* [Никита Дубко - WWW-аппликация](https://www.youtube.com/watch?v=__o3EHC9nZQ)
+* [Chrome University (2019)](https://www.youtube.com/watch?v=kNzoswFIU9M&list=PLNYkxOF6rcICgS7eFJrGDhMBwWtdTgzpx)
+* [Chromium University (2020)](youtube.com/playlist?list=PL9ioqAuyl6ULp1f36EEjIN1vSBEfsb-0a)
