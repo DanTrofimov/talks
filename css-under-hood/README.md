@@ -1,5 +1,5 @@
-## CSS under hood
-Here I wanna tell u about how CSS works under the hood. 
+## Browser under the hood
+Here I wanna tell u about how browser works under the hood. (including JS processing, CSS & HTML rendering) 
 
 Probably I will talk about some of this themes:
 * V8 and JS
