@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>dan trofimov</title>
+    <title>Accessibility - best practice & tooling</title>
     <meta charset="utf-8">
     <link rel="icon" href="../utils/pictures/favicon.svg" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,21 +14,129 @@
 </head>
 <body class="shower list">
     <header class="caption">
-        <h1>CSS</h1>
-        <p>New specifications</p>
+        <h1>Accessibility</h1>
+        <p>best practice & tooling</p>
     </header>
 
     <section class="slide">
-        <h2 class="shout" id="title">CSS. What is new? (2021)</h2>
+        <h2 class="shout" id="title">Accessibility <br/> best practice & tooling</h2>
         <style>
             #title {
                 font-size: 65px;
+                line-height: 70px;
             }
         </style>
     </section>
 
     <section class="slide">
-        
+        <h2>Plan</h2>
+        <ol>
+            <li><dt>Semantics</dt><dd>- special tags & headings</dd></li>
+            <li class="next"><dt>Navigation & focus</dt><dd>- if I lost my mouse</dd></li>
+            <li class="next"><dt>Accessibility tooling</dt><dd>- how to inspect & test accessibility on your project</dd></li>
+        </ol>
+        <style>
+            dt {
+                font-weight: bold;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Semantics</h2>
+        <img src="https://media.wired.com/photos/59a459d3b345f64511c5e3d4/16:9/w_2494,h_1403,c_limit/MemeLoveTriangle_297886754.jpg" alt="1 man 2 woman meme" class="semantisc-meme">
+        <span class="code div-element">&lt;div&gt;</span>
+        <span class="code semantics-element">
+            &lt;section&gt; <br>
+            &lt;aside&gt; <br>
+            &lt;article&gt;
+        </span>
+        <style>
+            .semantisc-meme {
+                margin-left: 60px;
+                height: 75%;
+            }
+
+            .code {
+                color: #fff;
+                font-weight: bold;
+                text-shadow: #000 0 0 2px;
+            }
+
+            .div-element {
+                position: absolute;
+                top: 75%;
+                left: 32%;
+            }
+
+            .semantics-element {
+                position: absolute;
+                top: 68%;
+                left: 66%;
+                line-height: normal;
+                font-size: 20px;
+            }
+        </style>
+    </section>
+    
+    <section class="slide">
+        <h2>Common semantc tags</h2>
+        <div class="sem-container">
+            <ul>
+                <li>&lt;header&gt;</li>
+                <li>&lt;main&gt;</li>
+                <li>&lt;footer&gt;</li>
+                <li>&lt;aside&gt;</li>
+                <li>&lt;article&gt;</li>
+                <li>&lt;section&gt;</li>
+                <li>&lt;nav&gt;</li>
+            </ul>
+            <img src="https://miro.medium.com/max/3000/1*0t662G9gnDN90gQt9W2qEA.png" alt="semantic layout example">
+        </div>
+        <style>
+            .sem-container {
+                display: flex;
+                gap: 12%;
+            }
+
+            .sem-container img {
+                height: auto;
+                width: 65%;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>&lt;header&gt;</h2>
+        <div class="header-container">
+            <p>The <span class="tag">&lt;header&gt;</span> HTML element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.</p>
+            <img src="https://sun9-5.userapi.com/impg/PH_uB5GqzHBqk2_nT-KQrrT0dRcQTFwVYKsltQ/pD2tXxv65K8.jpg?size=1169x826&quality=96&sign=ef440876b55fd3b572a8f085a26c80d6&type=album" alt="header tag example">
+        </div>
+        <style>
+            .tag {
+                font-weight: bold;
+            }
+
+            .header-container {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+            }
+
+            .header-container img {
+                width: 50%;
+                height: 40%;
+            }
+
+            .header-container p {
+                font-size: 20px;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <!-- Пример недоступной разметки -->
+        <h2 class="shout demo"><a href="https://eda.yandex.ru/kazan" target="_blank">Demo</a></h2>
     </section>
 
     <footer class="badge">
