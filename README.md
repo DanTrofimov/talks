@@ -1,2 +1,2 @@
 # talks
-some of my talks &amp; lectures
+some of my public talks
