@@ -13,3 +13,4 @@ Here I'm going to tell u about semantics, accessible navigation & inspect toolin
 * [Заголовки H1, H2, H3,…, H6](https://convertmonster.ru/blog/seo-blog/html-tegi-h1-h2-h3-h4-h5-h6-zagolovki/)
 * [Having a Little Fun With Custom Focus Styles](https://css-tricks.com/having-a-little-fun-with-custom-focus-styles/)
 * [Genees - contrast tooling](https://geenes.app/editor/explore)
+* [Цикл статей про доступность от MDN](https://developer.mozilla.org/ru/docs/Learn/Accessibility)
