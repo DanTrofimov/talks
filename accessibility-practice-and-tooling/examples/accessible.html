@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Доступный пример</title>
+    <style>
+      :root {
+        --border-setup: 4px black dashed;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Consolas, sans-serif;
+        font-weight: bold;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .navigation {
+        padding: 15px 50px;
+        border: var(--border-setup);
+      }
+
+      .navigation-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+
+      .header {
+        grid-column: 1 / 4;
+        height: 100px;
+        border-bottom: var(--border-setup);
+      }
+
+      .left-sidebar {
+        grid-column: 1 / 2;
+        border-right: var(--border-setup);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .main {
+        grid-column: 2 / 3;
+        border-right: var(--border-setup);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .right-sidebar {
+        grid-column: 3 / 4;
+        display: grid;
+        place-items: center;
+      }
+
+      .footer {
+        grid-column: 1 / 4;
+        height: 70px;
+        border-top: var(--border-setup);
+      }
+
+      .article {
+        min-width: 80%;
+        height: 20%;
+        border: var(--border-setup);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .header,
+      .left-sidebar,
+      .footer,
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        border: var(--border-setup);
+      }
+
+      .form label {
+        font-size: 20px;
+      }
+
+      .form div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .submit-button {
+        align-self: flex-start;
+        font-size: 20px;
+        padding: 5px 10px;
+      }
+
+      .form-title {
+        margin-bottom: 20px;
+      }
+
+      #dino-label {
+        color: gray;
+      }
+
+      .links-example {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        margin-top: -200px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navigation" role="navigation">
+        <ul class="navigation-list">
+          <li><a href="">главная</a></li>
+          <li><a href="">статьи</a></li>
+          <li><a href="">о нас</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="left-sidebar">
+      <h2>Второстепенный контент</h2>
+      <article class="article" aria-label="Статья о динозавриках №1">
+        <h3>Статья №1</h3>
+        <p>контент статьи</p>
+      </article>
+      <article class="article" aria-label="Статья о динозавриках №1">
+        <h3>Статья №2</h3>
+        <p>контент статьи</p>
+      </article>
+      <article class="article" aria-label="Статья о динозавриках №1">
+        <h3>Статья №3</h3>
+        <p>контент статьи</p>
+      </article>
+    </section>
+    <main class="main">
+      <h1>Главная мысль</h1>
+      <img
+        role="img"
+        tabindex="0"
+        src="https://googledino.ru/assets/googe_dino.png"
+        width="100"
+        aria-labelledby="dino-label"
+      />
+      <p id="dino-label">Серый Динозаврик из Гугл Хрома</p>
+      <section>
+        <h2>Менее главная мысль</h2>
+        <p>текст к менее главной мысли</p>
+      </section>
+      <section>
+        <h3>Еще менее главная мысль жеесть</h3>
+        <p>текст к еще менее главной мысли</p>
+      </section>
+      <section>
+        <h2>Менее главная мысль</h2>
+        <p>текст к менее главной мысли</p>
+      </section>
+    </main>
+    <aside class="right-sidebar">
+      <div>
+        <h2 id="form-label" class="form-title">Пример формы:</h2>
+        <form action="" class="form" aria-labelledby="form-label">
+          <div>
+            <label for="name">Укажите ваше имя:</label>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div>
+            <label for="age">Укажите ваш возраст:</label>
+            <input type="text" id="age" name="age" />
+          </div>
+          <div>
+            <label for="mood">Выберите ваше настроение:</label>
+            <select id="mood" name="mood">
+              <option>Счастливый</option>
+              <option>Грустный</option>
+              <option>Злой</option>
+              <option>Обеспокоенный</option>
+            </select>
+          </div>
+          <button class="submit-button" type="submit">отправить</button>
+        </form>
+      </div>
+      <div class="links-example">
+        <a href="https://www.google.com/" target="_blank">перейти в поисковик</a>
+        <a href="https://www.mozilla.org" target="_blank">официальный сайт mozilla</a>
+        <a href="https://pepelsbey.net/" target="_blank">страница пользователя pepelsbey</a>
+      </div>
+    </aside>
+    <footer class="footer"></footer>
+  </body>
+</html>

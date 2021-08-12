@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Недоступный пример</title>
+    <style>
+      :root {
+        --border-setup: 4px black dashed;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: Consolas, sans-serif;
+        font-weight: bold;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .navigation {
+        padding: 15px 50px;
+        border: var(--border-setup);
+      }
+
+      .navigation-list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
+
+      .header {
+        grid-column: 1 / 4;
+        height: 100px;
+        border-bottom: var(--border-setup);
+      }
+
+      .left-sidebar {
+        grid-column: 1 / 2;
+        border-right: var(--border-setup);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .main {
+        grid-column: 2 / 3;
+        border-right: var(--border-setup);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 40px;
+      }
+
+      .right-sidebar {
+        grid-column: 3 / 4;
+        display: grid;
+        place-items: center;
+      }
+
+      .footer {
+        grid-column: 1 / 4;
+        height: 70px;
+        border-top: var(--border-setup);
+      }
+
+      .article {
+        min-width: 80%;
+        height: 20%;
+        border: var(--border-setup);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 20px;
+        text-align: center;
+        padding-top: 20px;
+      }
+
+      .header,
+      .left-sidebar,
+      .footer,
+      .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px;
+        border: var(--border-setup);
+      }
+
+      .form p {
+        font-size: 20px;
+      }
+
+      .form div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+      }
+
+      .submit-button {
+        align-self: flex-start;
+        font-size: 20px;
+        padding: 5px 10px;
+      }
+
+      .form-title {
+        margin-bottom: 20px;
+      }
+
+      #dino-label {
+        color: gray;
+      }
+
+      .links-example {
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        margin-top: -200px;
+      }
+
+      .level-1 {
+          font-size: 40px;;
+      }
+
+      .level-2 {
+          font-size: 30px;
+      }
+
+      .level-3 {
+          font-size: 25px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="navigation">
+        <div class="navigation-list">
+          <li><a href="">главная</a></li>
+          <li><a href="" tabindex="-1">статьи</a></li>
+          <li><a href="">о нас</a></li>
+        </div>
+      </div>
+    </div>
+    <div class="left-sidebar">
+      <p class="level-2">Второстепенный контент</p>
+      <div class="article" aria-label="Статья о динозавриках №1">
+        <p class="level-3">Статья №1</p>
+        <p>контент статьи</p>
+      </div>
+      <div class="article" aria-label="Статья о динозавриках №1">
+        <p class="level-3">Статья №2</p>
+        <p>контент статьи</p>
+      </div>
+      <div class="article" aria-label="Статья о динозавриках №1">
+        <p class="level-3">Статья №3</p>
+        <p>контент статьи</p>
+      </div>
+    </div>
+    <div class="main">
+      <p class="level-1">Главная мысль</p>
+      <img
+        src="https://googledino.ru/assets/googe_dino.png"
+        width="100"
+      />
+      <p id="dino-label">Серый Динозаврик из Гугл Хрома</p>
+      <div>
+        <p class="level-2">Менее главная мысль</p>
+        <p>текст к менее главной мысли</p>
+      </div>
+      <section>
+        <p class="level-3">Еще менее главная мысль жеесть</p>
+        <p>текст к еще менее главной мысли</p>
+      </section>
+      <section>
+        <p class="level-2">Менее главная мысль</p>
+        <p>текст к менее главной мысли</p>
+      </section>
+    </div>
+    <div class="right-sidebar">
+      <div>
+        <p id="form-label" class="form-title level-3">Пример формы:</p>
+        <form action="" class="form">
+          <div>
+            <p>Укажите ваше имя:</з>
+            <input type="text" id="name" name="name" />
+          </div>
+          <div>
+            <p>Укажите ваш возраст:</p>
+            <input type="text" id="age" name="age" />
+          </div>
+          <div>
+            <p for="mood">Выберите ваше настроение:</p>
+            <select id="mood" name="mood">
+              <option>Счастливый</option>
+              <option>Грустный</option>
+              <option>Злой</option>
+              <option>Обеспокоенный</option>
+            </select>
+          </div>
+          <button class="submit-button" type="submit">нажми на меня!</button>
+        </form>
+      </div>
+      <div class="links-example">
+        <a href="https://www.google.com/" target="_blank">тык</a>
+        <a href="https://www.mozilla.org" target="_blank">перейти на сайт</a>
+        <a href="https://pepelsbey.net/" target="_blank">тык</a>
+      </div>
+    </div>
+    <footer class="footer"></footer>
+  </body>
+</html>
