@@ -14,4 +14,6 @@ Here I'm going to tell u about semantics, accessible navigation & inspect toolin
 * [Having a Little Fun With Custom Focus Styles](https://css-tricks.com/having-a-little-fun-with-custom-focus-styles/)
 * [Genees - contrast tooling](https://geenes.app/editor/explore)
 * [Цикл статей про доступность от MDN](https://developer.mozilla.org/ru/docs/Learn/Accessibility)
-3
+* [Важ­ность уров­ней за­го­лов­ков для вспо­мо­га­тель­ных тех­но­ло­гий](https://web-standards.ru/articles/heading-levels/)
+* [h1–h6: The HTML Section Heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+* [A11ycasts - Google Chrome Developers](https://www.youtube.com/watch?v=HtTyRajRuyY&list=PLNYkxOF6rcICWx0C9LVWWVqvHlYJyqw7g)

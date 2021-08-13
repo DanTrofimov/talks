@@ -1,157 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <title>A11y - best practice & tooling</title>
-    <meta charset="utf-8">
-    <link rel="icon" href="../utils/pictures/favicon.svg" type="image/x-icon">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <link rel="stylesheet" href="../utils/shower/themes//ribbon/styles/styles.css">
+    <meta charset="utf-8" />
+    <link rel="icon" href="../utils/pictures/favicon.svg" type="image/x-icon" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <link
+      rel="stylesheet"
+      href="../utils/shower/themes//ribbon/styles/styles.css"
+    />
     <style>
-        .shower {
-            --slide-ratio: calc(16 / 9);
-        }
+      .shower {
+        --slide-ratio: calc(16 / 9);
+      }
     </style>
-</head>
-<body class="shower list">
+  </head>
+  <body class="shower list">
     <header class="caption">
-        <h1>Accessibility</h1>
-        <p>best practice & tooling</p>
+      <h1>Accessibility</h1>
+      <p>best practice & tooling</p>
     </header>
 
     <section class="slide">
-        <h2 class="shout" id="title">A11y <br/> best practice & tooling</h2>
-        <style>
-            #title {
-                font-size: 65px;
-                line-height: 70px;
-            }
-        </style>
+      <h2 class="shout" id="title">
+        A11y <br />
+        best practice & tooling
+      </h2>
+      <style>
+        #title {
+          font-size: 65px;
+          line-height: 70px;
+        }
+      </style>
     </section>
 
     <section class="slide">
-        <h2>Plan</h2>
+      <h2>Plan</h2>
+      <ol>
+        <li class="next">
+          <dt>Semantics</dt>
+          <dd>- semantic tags & headings</dd>
+        </li>
+        <li class="next">
+          <dt>Navigation & focus</dt>
+          <dd>- if I lost my mouse</dd>
+        </li>
+        <li class="next">
+          <dt>Accessibility tooling</dt>
+          <dd>- how to inspect & test accessibility on your project</dd>
+        </li>
+      </ol>
+      <style>
+        dt {
+          font-weight: bold;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Semantics</h2>
+      <img
+        src="https://media.wired.com/photos/59a459d3b345f64511c5e3d4/16:9/w_2494,h_1403,c_limit/MemeLoveTriangle_297886754.jpg"
+        alt="1 man 2 woman meme"
+        class="semantisc-meme"
+      />
+      <span class="code div-element">&lt;div&gt;</span>
+      <span class="code semantics-element">
+        &lt;section&gt; <br />
+        &lt;aside&gt; <br />
+        &lt;article&gt;
+      </span>
+      <style>
+        .semantisc-meme {
+          margin-left: 60px;
+          height: 75%;
+        }
+
+        .code {
+          color: #fff;
+          font-weight: bold;
+          text-shadow: #000 0 0 2px;
+        }
+
+        .div-element {
+          position: absolute;
+          top: 75%;
+          left: 32%;
+        }
+
+        .semantics-element {
+          position: absolute;
+          top: 68%;
+          left: 66%;
+          line-height: normal;
+          font-size: 20px;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>Common semantic tags (landmarks)</h2>
+      <div class="sem-container">
+        <ul>
+          <li>&lt;header&gt;</li>
+          <li>&lt;main&gt;</li>
+          <li>&lt;footer&gt;</li>
+          <li>&lt;nav&gt;</li>
+          <li>&lt;aside&gt;</li>
+          <li>&lt;article&gt;</li>
+          <li>&lt;section&gt;</li>
+        </ul>
+        <img
+          src="https://miro.medium.com/max/3000/1*0t662G9gnDN90gQt9W2qEA.png"
+          alt="semantic layout example"
+        />
+      </div>
+      <style>
+        .sem-container {
+          display: flex;
+          gap: 12%;
+        }
+
+        .sem-container img {
+          height: auto;
+          width: 65%;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>&lt;header&gt;</h2>
+      <div class="tag-info-container">
+        <p style="font-size: 23px">
+          The <span class="tag">&lt;header&gt;</span> HTML element represents
+          introductory content, typically a group of introductory or
+          navigational aids. It may contain some heading elements but also a
+          logo, a search form, an author name, and other elements.
+        </p>
+        <img
+          src="https://sun9-5.userapi.com/impg/PH_uB5GqzHBqk2_nT-KQrrT0dRcQTFwVYKsltQ/pD2tXxv65K8.jpg?size=1169x826&quality=96&sign=ef440876b55fd3b572a8f085a26c80d6&type=album"
+          alt="header tag example"
+        />
+      </div>
+      <style>
+        .tag {
+          font-weight: bold;
+        }
+
+        .tag-info-container {
+          display: flex;
+          justify-content: space-between;
+          gap: 20px;
+        }
+
+        .tag-info-container img {
+          width: 50%;
+          height: 40%;
+        }
+
+        .header-container p {
+          font-size: 20px;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <h2>&lt;main&gt;</h2>
+      <div class="tag-info-container">
+        <p style="font-size: 23px">
+          The <span class="tag">&lt;main&gt;</span> HTML element represents the
+          dominant content of the <span class="tag">&lt;body&gt;</span> of a
+          document. The main content area consists of content that is directly
+          related to or expands upon the central topic of a document, or the
+          central functionality of an application.
+        </p>
+        <img
+          width="200"
+          src="https://sun9-9.userapi.com/impg/QUQB-LUIOmmyRnIRM-C_VEvEyTEd08wZUo-6Zg/PnPMMWAN6w4.jpg?size=766x543&quality=96&sign=7d2b6f38865d0c8ca5f18f0499fb8b88&type=album"
+          alt="main tag example"
+        />
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>&lt;footer&gt;</h2>
+      <div class="tag-info-container">
+        <p style="font-size: 23px">
+          The <span class="tag">&lt;footer&gt;</span> HTML element represents a
+          footer for its nearest sectioning content or sectioning root element.
+          A <span class="tag">&lt;footer&gt;</span> typically contains
+          information about the author of the section, copyright data or links
+          to related documents.
+        </p>
+        <img
+          width="200"
+          src="https://sun9-78.userapi.com/impg/xgsDwot-AgcqSrOiTHcovq4zKnY1rwFJVJyvDQ/-OZAsLy8gYs.jpg?size=1205x778&quality=96&sign=08d2cca7a7c7bc97c5dbbfcbd28b04ae&type=album"
+          alt="footer tag example"
+        />
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>&lt;nav&gt;</h2>
+      <div class="tag-info-container">
+        <p style="font-size: 23px">
+          The <span class="tag">&lt;nav&gt;</span> HTML element represents a
+          section of a page whose purpose is to provide navigation links, either
+          within the current document or to other documents. Common examples of
+          navigation sections are menus, tables of contents, and indexes.
+        </p>
+        <img
+          width="200"
+          src="https://sun9-81.userapi.com/impg/l6rMpoqkuUwjtC0a0PMbCneew0djj6NjS4LCwQ/aKviQ6EskW4.jpg?size=1257x597&quality=96&sign=8d5541df89e85a9b6736f3613779b63c&type=album"
+          alt="nav tag example"
+        />
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>&lt;aside&gt;</h2>
+      <div class="tag-info-container">
+        <p style="font-size: 23px">
+          The <span class="tag">&lt;aside&gt;</span> HTML element represents a
+          portion of a document whose content is only indirectly related to the
+          document's main content. Asides are frequently presented as sidebars
+          or call-out boxes.
+        </p>
+        <img
+          width="200"
+          src="https://sun9-61.userapi.com/impg/I4CzAc-s9AG5tnyJgOqkDjwxs9-0a42S8w7CeQ/uQ47qyXXLsY.jpg?size=490x291&quality=96&sign=89ade1730a23e278e888db12c7331612&type=album"
+          alt="aside tag example"
+        />
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>&lt;article&gt;</h2>
+      <div class="tag-info-container">
+        <p style="font-size: 23px">
+          The <span class="tag">&lt;article&gt;</span> HTML element represents a
+          self-contained composition in a document, page, application, or site,
+          which is intended to be independently distributable or reusable (e.g.,
+          in syndication). Examples include: a forum post, a magazine or
+          newspaper article.
+        </p>
+        <img
+          width="200"
+          style="width: 300px !important"
+          src="https://sun9-66.userapi.com/impg/wgQ7AqljJU2xWovP-Rn1SWzoy2IxOK53-oT0Rg/9_W7-nTl1tA.jpg?size=383x363&quality=96&sign=8bb4d453c9c11c0d0b3314a296b2e011&type=album"
+          alt="article tag example"
+        />
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>&lt;section&gt;</h2>
+      <div class="tag-info-container">
+        <p style="font-size: 23px">
+          The <span class="tag">&lt;section&gt;</span> HTML element represents a
+          generic standalone section of a document, which doesn't have a more
+          specific semantic element to represent it. Sections should always have
+          a heading, with very few exceptions.
+        </p>
+        <img
+          width="200"
+          src="https://sun9-26.userapi.com/impg/K8aw1O0O1fk0YuV-OQVFb4CmEPfizKJeBKicMA/v-WH4vft2Jo.jpg?size=1190x734&quality=96&sign=201c6e04004b722837611ec053da5c74&type=album"
+          alt="section tag example"
+        />
+      </div>
+    </section>
+
+    <section class="slide">
+      <h2>Headings (&lt;h1&gt;, &lt;h2&gt; ...)</h2>
+      <ul>
+        <li>
+          Use only one <span class="tag">&lt;h1&gt;</span> per page or view. It
+          should concisely describe the overall purpose of the content.
+        </li>
+        <li>
+          Avoid skipping heading levels: always start from
+          <span class="tag">&lt;h1&gt;</span>, followed by
+          <span class="tag">&lt;h2&gt;</span> and so on.
+        </li>
+        <li>
+          Avoid using heading elements to resize text. Instead, use the CSS
+          <span class="tag">font-size</span> property.
+        </li>
+        <li style="font-weight: bold">
+          The easiest way of navigation on the web page.
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Aria-labels & alt-text</h2>
+        <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=material&wt=none&l=htmlmixed&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520%25231%2520--%253E%250A%253Cimg%250A%2520%2520src%253D%2522https%253A%252F%252Fgoogledino.ru%252Fassets%252Fgooge_dino.png%2522%250A%2520%2520width%253D%2522100%2522%250A%2520%2520alt%253D%2522Grey%2520Google%2520Chrome%2520Dino%2522%250A%252F%253E%250A%250A%253C%21--%2520%25232%2520--%253E%250A%253Cimg%250A%2520%2520src%253D%2522https%253A%252F%252Fgoogledino.ru%252Fassets%252Fgooge_dino.png%2522%250A%2520%2520width%253D%2522100%2522%250A%2520%2520aria-labelledby%253D%2522dino-label%2522%250A%252F%253E%250A%253Cp%2520id%253D%2522dino-label%2522%253EGrey%2520Google%2520Chrome%2520Dino%253C%252Fp%253E"
+            style="width: 810px; height: 332px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+      </iframe>
+    </section>
+
+    <section class="slide">
+      <h2>Use labels for inputs</h2>
+      <iframe
+        src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=material&wt=none&l=htmlmixed&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520Cool%2520--%253E%250A%253Clabel%2520for%253D%2522age%2522%253EEnter%2520your%2520age%253A%253C%252Flabel%253E%250A%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522age%2522%2520name%253D%2522age%2522%2520%252F%253E%250A%250A%253C%21--%2520Not%2520cool%2520--%253E%250A%253Cp%253EEnter%2520your%2520age%253A%253Cp%253E%250A%253Cinput%2520type%253D%2522text%2522%2520id%253D%2522age%2522%2520name%253D%2522age%2522%2520%252F%253E"
+        style="
+          width: 810px;
+          height: 203px;
+          border: 0;
+          transform: scale(1);
+          overflow: hidden;
+        "
+        sandbox="allow-scripts allow-same-origin"
+      >
+      </iframe>
+      <div class="input-sample">
+        <label for="age">Enter your age:</label>
+        <input type="text" id="age" name="age" />
+      </div>
+      <style>
+        .input-sample {
+          font-size: 30px;
+          margin-top: 20px;
+          text-align: center;
+        } 
+
+        .input-sample input {
+            height: 25px;
+            margin-left: 10px;
+        }
+
+        .input-sample input:focus {
+          outline: none;
+          box-shadow: 20px 15px 30px yellow, -20px 15px 30px lime,
+            -20px -15px 30px blue, 20px -15px 30px red;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+        <h2>&lt;button&gt; vs &lt;a&gt;</h2>
         <ol>
-            <li><dt>Semantics</dt><dd>- special tags & headings</dd></li>
-            <li class="next"><dt>Navigation & focus</dt><dd>- if I lost my mouse</dd></li>
-            <li class="next"><dt>Accessibility tooling</dt><dd>- how to inspect & test accessibility on your project</dd></li>
+            <li class="next">It's a <span class="tag">&lt;button&gt;</span></li>
+            <li class="next">Else <span class="tag">&lt;a href="..."&gt;</span> (redirect or anchor)</li>
+            <li class="next">The end.</li>
         </ol>
-        <style>
-            dt {
-                font-weight: bold;
-            }
-        </style>
+    </section>
+      
+    <section class="slide">
+      <h2>
+        Use native solutions (<span style="text-decoration: underline"
+          >focus</span
+        >
+        & API)
+      </h2>
+      <img
+        class=""
+        width="700"
+        src="https://sun9-3.userapi.com/impg/hKdY3ofz4HGlqmBskSw2ophIgp7KwcMHwj4z-A/LF0y0Jcj_kU.jpg?size=1620x848&quality=96&sign=1219ed4d24d559161ba0cd53dcc3aa0d&type=album"
+        alt="native tags example"
+      />
     </section>
 
     <section class="slide">
-        <h2>Semantics</h2>
-        <img src="https://media.wired.com/photos/59a459d3b345f64511c5e3d4/16:9/w_2494,h_1403,c_limit/MemeLoveTriangle_297886754.jpg" alt="1 man 2 woman meme" class="semantisc-meme">
-        <span class="code div-element">&lt;div&gt;</span>
-        <span class="code semantics-element">
-            &lt;section&gt; <br>
-            &lt;aside&gt; <br>
-            &lt;article&gt;
-        </span>
-        <style>
-            .semantisc-meme {
-                margin-left: 60px;
-                height: 75%;
-            }
-
-            .code {
-                color: #fff;
-                font-weight: bold;
-                text-shadow: #000 0 0 2px;
-            }
-
-            .div-element {
-                position: absolute;
-                top: 75%;
-                left: 32%;
-            }
-
-            .semantics-element {
-                position: absolute;
-                top: 68%;
-                left: 66%;
-                line-height: normal;
-                font-size: 20px;
-            }
-        </style>
-    </section>
-    
-    <section class="slide">
-        <h2>Common semantc tags</h2>
-        <div class="sem-container">
-            <ul>
-                <li>&lt;header&gt;</li>
-                <li>&lt;main&gt;</li>
-                <li>&lt;footer&gt;</li>
-                <li>&lt;aside&gt;</li>
-                <li>&lt;article&gt;</li>
-                <li>&lt;section&gt;</li>
-                <li>&lt;nav&gt;</li>
-            </ul>
-            <img src="https://miro.medium.com/max/3000/1*0t662G9gnDN90gQt9W2qEA.png" alt="semantic layout example">
+        <h2>Tab-navigation & focus</h2>
+        <iframe
+            src="https://carbon.now.sh/embed?bg=rgba%28255%2C255%2C255%2C1%29&t=material&wt=none&l=htmlmixed&ds=true&dsyoff=20px&dsblur=68px&wc=true&wa=false&pv=0px&ph=0px&ln=false&fl=1&fm=Hack&fs=14px&lh=133%25&si=false&es=2x&wm=false&code=%253C%21--%2520Ignored%2520by%2520tab-navigation%2520--%253E%250A%253Cbutton%2520type%253D%2522submit%2522%2520tabindex%253D%2522-1%2522%253ESend%2520form%2520data%253C%252Fbutton%253E%250A%250A%253C%21--%2520Different%2520values%2520--%253E%250A%253Cbutton%2520type%253D%2522submit%2522%2520tabindex%253D%25221%2522%253ESend%2520email%253C%252Fbutton%253E%250A%253Cbutton%2520type%253D%2522submit%2522%2520tabindex%253D%25223%2522%253EShare%253C%252Fbutton%253E%250A%253Cbutton%2520type%253D%2522submit%2522%2520tabindex%253D%25222%2522%253ELike%253C%252Fbutton%253E"
+            style="width: 810px; height: 203px; border:0; transform: scale(1); overflow:hidden;"
+            sandbox="allow-scripts allow-same-origin">
+        </iframe>
+        <div class="tabindex-example">
+            <button type="submit" tabindex="1">Send email</button>
+            <button type="submit" tabindex="3">Share</button>
+            <button type="submit" tabindex="2">Like</button>
         </div>
         <style>
-            .sem-container {
+            .tabindex-example {
                 display: flex;
-                gap: 12%;
+                flex-direction: row;
+                justify-content: center;
+                gap: 10px;
             }
 
-            .sem-container img {
-                height: auto;
-                width: 65%;
+            .tabindex-example button {
+                font-size: 30px;
+                padding: 10px 20px;
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2>&lt;header&gt;</h2>
-        <div class="header-container">
-            <p>The <span class="tag">&lt;header&gt;</span> HTML element represents introductory content, typically a group of introductory or navigational aids. It may contain some heading elements but also a logo, a search form, an author name, and other elements.</p>
-            <img src="https://sun9-5.userapi.com/impg/PH_uB5GqzHBqk2_nT-KQrrT0dRcQTFwVYKsltQ/pD2tXxv65K8.jpg?size=1169x826&quality=96&sign=ef440876b55fd3b572a8f085a26c80d6&type=album" alt="header tag example">
+        <h2>Outline styling</h2>
+        <div class="outline-meme">
+             <img width="360" src="https://sun9-35.userapi.com/impg/dcA6trdmYfrdfYx03Ttf_cjcvM3fBhnXExiY7g/VglTUjdT6eQ.jpg?size=727x731&quality=96&sign=e5088fa389176b7a2cd41691328d206d&type=album" alt="they are kids meme">
+             <pre>
+                 <p>:focus { </p>
+                 <p>&ensp;&ensp;&ensp;&ensp;outline: none;</p>   
+                 <p>}</p>
+             </pre>
         </div>
         <style>
-            .tag {
-                font-weight: bold;
-            }
-
-            .header-container {
+            .outline-meme {
                 display: flex;
-                justify-content: space-between;
-                gap: 20px;
-            }
-
-            .header-container img {
-                width: 50%;
-                height: 40%;
-            }
-
-            .header-container p {
-                font-size: 20px;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 70px
             }
         </style>
     </section>
 
     <section class="slide">
-        <h2>&lt;main&gt;</h2>
-        <p></p>
+      <!-- Пример недоступной разметки Яндекс.Еда-->
+      <h2 class="shout demo">
+        <a href="https://eda.yandex.ru/kazan" target="_blank">Demo</a>
+      </h2>
     </section>
 
-    <section class="slide">
-        <!-- Пример недоступной разметки Яндекс.Еда-->
-        <h2 class="shout demo"><a href="https://eda.yandex.ru/kazan" target="_blank">Demo</a></h2>
+    <section>
+            
     </section>
 
     <footer class="badge">
-        <a href="https://github.com/shower/shower">Fork me on GitHub</a>
+      <a href="https://github.com/shower/shower">Fork me on GitHub</a>
     </footer>
 
     <div class="progress"></div>
 
     <script src="../utils/shower/shower.js"></script>
     <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
-
-</body>
+  </body>
 </html>
