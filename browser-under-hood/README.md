@@ -1,5 +1,5 @@
 ## Browser under the hood
-Here I wanna tell u about how browser works under the hood.
+Here I wanna tell u about how browser works under the hood (rendering, handling JS & HTML & CSS)
 ## References
 * [Устройство современного веб-браузера Chrome (часть 1/4)](https://habr.com/ru/post/526696/)
 * [Устройство современного веб-браузера Chrome (часть 1/4)](https://habr.com/ru/post/529248/)
