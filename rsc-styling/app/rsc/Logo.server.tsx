@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import exampleImage from '../../public/example.gif'
-import { useEffect } from 'react';
+import styles from '@styles/styles.module.css'
 
 export const Logo = () => {
     
@@ -10,6 +10,7 @@ export const Logo = () => {
       <Image
         src={exampleImage}
         alt="Picture of the author"
+        className={styles.logo}
       />
     );
   }
