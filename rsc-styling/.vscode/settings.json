@@ -1,7 +1,4 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true,
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  }
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }
