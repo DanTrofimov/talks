@@ -1,38 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Стилизация в контексте Next.js 13 и серверных компонентов
 
-## Getting Started
+[Презентация с митапа](https://docs.google.com/presentation/d/1dyGUIkMhp3mA2XV_2Aur8Rf8qWZIHlyOTkqyYyc4D70/edit?usp=sharing)
 
-First, run the development server:
-
+### Запуск демо:
 ```bash
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Полезные ссылки:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1)  RSC RFC https://github.com/reactjs/rfcs/blob/main/text/0188-server-components.md
+2) Дэн Абрамов представляет https://react.dev/blog/2020/12/21/data-fetching-with-react-server-components
+3) Серверные VS Клиентские в контексте Next.js 13 https://beta.nextjs.org/docs/rendering/server-and-client-components#sharing-data-between-server-components
+4) RSC in depth by Plasmic https://www.plasmic.app/blog/how-react-server-components-work
+5) Styled Components at RSC issue - https://github.com/facebook/react/issues/23126
+6) Сообщество Meme Battle - https://github.com/MemeBattle

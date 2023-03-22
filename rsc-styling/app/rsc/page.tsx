@@ -1,8 +1,6 @@
-'use client'
-
 import Link from 'next/link';
 import { Logo } from './Logo.server';
-import { Description } from './Description.server';
+import { Description } from '../rcc/Description.client';
 
 const page = () => {
     return (
