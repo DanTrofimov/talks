@@ -15,12 +15,12 @@ export const Logo = () => {
         console.log('Client component rendered');
     });
 
-
     return (
       <Image
         src={exampleImage}
         alt="Picture of the author"
         className={styles.logo}
+        width={300}
       />
     );
   }

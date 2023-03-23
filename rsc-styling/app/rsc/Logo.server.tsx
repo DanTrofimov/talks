@@ -11,6 +11,7 @@ export const Logo = () => {
         src={exampleImage}
         alt="Picture of the author"
         className={styles.logo}
+        width={300}
       />
     );
   }

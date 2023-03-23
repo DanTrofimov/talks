@@ -15,4 +15,6 @@ npm run dev
 3) [Серверные VS Клиентские в контексте Next.js 13](https://beta.nextjs.org/docs/rendering/server-and-client-components#sharing-data-between-server-components)
 4) [RSC in depth by Plasmic](https://www.plasmic.app/blog/how-react-server-components-work)
 5) [Styled Components at RSC issue](https://github.com/facebook/react/issues/23126)
-6) [Сообщество Meme Battle](https://github.com/MemeBattle)
+6) [Контекст и серверные компоненты](https://beta.nextjs.org/docs/rendering/server-and-client-components#context)
+7) [Styled Components под капотом](https://www.joshwcomeau.com/react/demystifying-styled-components/)
+8) [Сообщество Meme Battle](https://github.com/MemeBattle)

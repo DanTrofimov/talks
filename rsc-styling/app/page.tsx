@@ -8,8 +8,6 @@ export default function Home() {
       <p>
         Main Demo page.
       </p>
-      <Link href="/example">RSC Example</Link>
-      <br />
       <Link href="/rsc">go to test page with React Server Components</Link>
       <br />
       <Link href="/rcc">go to test page with React Client Components</Link>
